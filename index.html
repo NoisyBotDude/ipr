@@ -97,6 +97,7 @@
 		type='text/css' media='all' />
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
 	<link rel='https://api.w.org/' href='wp-json/wp-json.html' />
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.xml" />
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
@@ -115,14 +116,63 @@
 	</style>
 	<style>
 		.sabbi-page-header {
-			background-color: #b03838;
+			background-color: #054d84;
 		}
 
 		.blog-banner.sabbi-page-header {
-			background-color: #b03838;
+			background-color: #054d84;
 		}
 	</style>
 	<style type="text/css" title="dynamic-css" class="options-output">
+		#slideshow {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#slides {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#slides img {
+			width: 800px;
+			height: 500px;
+		}
+
+		#slides .slide {
+			display: none;
+		}
+
+		#slides .slide.active {
+			display: block;
+		}
+
+		#slides .slide.active-non-main {
+			display: block;
+		}
+
+		#slides .slide.active img {
+			animation: fade 0.5s;
+		}
+
+		@keyframes fade {
+			from {
+				opacity: .4
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		#slides .slide.active .caption {
+			animation: fade 0.5s;
+		}
+
 		.academix-content-area {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -197,19 +247,19 @@
 
 		.navbar-nav-hov_underline>.navbar-nav>li>a:hover,
 		.navbar-nav-hov_underline>.navbar-nav>li>a:focus {
-			border-bottom: 4px solid #D30015;
+			border-bottom: 4px solid #054d84;
 		}
 
 		.navbar-nav-hov_underline>.navbar-nav>li.active>a {
-			border-bottom: 4px solid #D30015;
+			border-bottom: 4px solid #054d84;
 		}
 
 		.navbar-nav-hov_underline .navbar-nav .dropdown-menu:before {
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 			{
-			color: #D30015;
+			color: #054d84;
 		}
 
 		.navbar-nav-hov_underline .navbar-nav .dropdown-menu {
@@ -336,15 +386,15 @@
 		}
 
 		.nav-btn-wrap .btn-primary {
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 			{
-			color: #D30015;
+			color: #054d84;
 		}
 
 		.nav-btn-wrap .btn-primary {
-			border: 1px solid #D30015;
+			border: 1px solid #054d84;
 		}
 
 			{
@@ -376,11 +426,11 @@
 		}
 
 		.sabbi-page-header .page-title {
-			background-color: rgba(211, 0, 21, 0.7);
+			background-color: #054d84;
 		}
 
 			{
-			color: rgba(211, 0, 21, 0.7);
+			color: #054d84;
 		}
 
 			{
@@ -407,11 +457,11 @@
 		}
 
 			{
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 		.blog-breadcrumb .sabbi-breadcrumb {
-			color: #D30015;
+			color: #054d84;
 		}
 
 			{
@@ -423,19 +473,19 @@
 		}
 
 		.blog-banner.sabbi-page-header {
-			background-color: #b03838;
+			background-color: #054d84;
 		}
 
 			{
-			color: #b03838;
+			color: #054d84;
 		}
 
 		.blog-banner.sabbi-page-header .page-title {
-			background-color: rgba(211, 0, 21, 0.7);
+			background-color: #054d84;
 		}
 
 			{
-			color: rgba(211, 0, 21, 0.7);
+			color: #054d84;
 		}
 
 		.blog-banner.sabbi-page-header .page-title {
@@ -482,11 +532,11 @@
 		}
 
 			{
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 		.blog-breadcrumb .sabbi-breadcrumb a {
-			color: #D30015;
+			color: #054d84;
 		}
 
 			{
@@ -641,21 +691,21 @@
 		}
 
 			{
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 		.footer-bar .copyright a,
 		.powredby a {
-			color: #D30015;
+			color: #054d84;
 		}
 
 			{
-			background-color: #D30015;
+			background-color: #054d84;
 		}
 
 		.footer-bar .copyright a:hover,
 		.powredby a:hover {
-			color: #D30015;
+			color: #054d84;
 		}
 
 		body {
@@ -681,15 +731,15 @@
 		}
 
 		a {
-			color: #D30015;
+			color: #054d84;
 		}
 
 		a:hover {
-			color: #D30015;
+			color: #054d84;
 		}
 
 		a:active {
-			color: #D30015;
+			color: #054d84;
 		}
 
 		h1 {
@@ -1138,14 +1188,14 @@
 									id="menu-item-1621"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1621 dropdown">
 									<a title="Project" href="" data-hover="dropdown" data-animations="zoomIn"
-										class="dropdown-toggle" aria-haspopup="true">About<span
+										class="dropdown-toggle" aria-haspopup="true">Vision<span
 											class="caret"></span></a>
 
 									<ul role="menu" class="dropdown-menu">
 										<li itemscope="itemscope"
 											itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1630"
 											class="menu-item menu-item-type-post_type menu-item-object-event menu-item-1630">
-											<a title="Past Project" href="./about.html">About</a>
+											<a title="Past Project" href="./vision.html">Vision</a>
 										</li>
 										<li itemscope="itemscope"
 											itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1630"
@@ -1159,6 +1209,15 @@
 											<a title="Past Project" href="./program-outcomes.html">Program Outcomes</a>
 										</li>
 									</ul>
+								</li>
+								<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+									id="menu-item-1617"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1796 current_page_item menu-item-has-children menu-item-1617 dropdown">
+
+									<a title="Home" href="gallery.html" data-hover="dropdown" data-animations="zoomIn"
+										class="dropdown-toggle" aria-haspopup="true">
+										Gallery
+									</a>
 								</li>
 
 							</ul>
@@ -1370,97 +1429,97 @@
 											</div>
 										</div>
 									</section>
-
-
-									<section class="kc-elm kc-css-5537 kc_row">
-										<!--<div class="kc-row-container  kc-container">
-									<div class="kc-wrap-columns">
-										<div class="kc-elm kc-css-376449 kc_col-sm-3 kc_column kc_col-sm-3">
-											<div class="kc-col-container"> 
-												<article class="sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-431215">
-													<figure class="sabbi-thumlinepost-card-figure">
-					                           			<img width="271" height="211" src="assets/img/home/Light_Metal_Alloys.jpg" class="img-responsive img-thumpost" alt="Light_Metal_Alloys" />
-					                          		</figure>
-					                          		<div class="sabbi-thumlinepost-card-meta">
-								                        <h2 class="info-box-title ht-5">Light Metal Alloys</h2>
-								                        <p>
-								                        Light Metal Alloys
-								                    	</p>
-														<a href="" title="btn title" target="_self" class="btn btn-unsolemn btn-action read-more">read more</a>
-													</div>
-												</article>
-											</div>
-										</div>
-
-						                <div class="kc-elm kc-css-538312 kc_col-sm-3 kc_column kc_col-sm-3">
-						                	<div class="kc-col-container">
-						                		<article class="sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-683140">
-						                			<figure class="sabbi-thumlinepost-card-figure">
-						                        		<img width="271" height="211" src="assets/img/home/Glass_Ceramic.jpg" class="img-responsive img-thumpost" alt="Glass_Ceramic" />
-						                        	</figure>
-						                        	<div class="sabbi-thumlinepost-card-meta">
-						                        		<h2 class="info-box-title ht-5">Glass Ceramic</h2>
-							                        	<p>
-							                        	Glass Ceramic
-							                        	</p>
-														<a href="" title="" target="_self" class="btn btn-unsolemn btn-action read-more">read more</a>
-													</div>
-												</article>
-											</div>
-										</div>
-
-										<div class="kc-elm kc-css-503227 kc_col-sm-3 kc_column kc_col-sm-3">
-											<div class="kc-col-container">
-												<article class="sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-869135">
-													<figure class="sabbi-thumlinepost-card-figure">
-						                           		<img width="271" height="211" src="assets/img/home/Additive_Manufacturing.jpg" class="img-responsive img-thumpost" alt="Additive_Manufacturing" />
-													</figure>
-													<div class="sabbi-thumlinepost-card-meta">
-						                        		<h2 class="info-box-title ht-5">Additive Manufacturing</h2>
-						                        		<p>
-						                        		Additive Manufacturing
-						                        		</p>
-														<a href="" title="" target="_self" class="btn btn-unsolemn btn-action read-more">read more</a>
-													</div>
-												</article>
-											</div>
-										</div>
-
-
-										<div class="kc-elm kc-css-322753 kc_col-sm-3 kc_column kc_col-sm-3">
-											<div class="kc-col-container">
-												<article class="sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-233597">
-													<figure class="sabbi-thumlinepost-card-figure">
-														<img width="271" height="211" src="assets/img/home/Shear_Band.jpg" class="img-responsive img-thumpost" alt="Shear_Band" />
-													</figure>
-													<div class="sabbi-thumlinepost-card-meta">
-														<h2 class="info-box-title ht-5">Shear Band</h2>
-														<p>
-														Shear Band
-														</p>
-														<a href="" title="" target="_self" class="btn btn-unsolemn btn-action read-more">read more</a>
-													</div>
-												</article>
-											</div>
-										</div>
-									</div>
-								</div>-->
-									</section>
-
 									<section class="kc-elm kc-css-427948 kc_row">
 										<div class="kc-row-container  kc-container">
 											<div class="kc-wrap-columns">
 
 												<div class="kc-elm kc-css-166907 kc_col-sm-4 kc_column kc_col-sm-4">
 													<div class="kc-col-container">
+														<article
+															class="news-card sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-674136">
+															<h2 class="stage-title">Quick Links</h2>
+															<ul class="list-unstyled lst_news_list" tabindex="0"
+																style="overflow-y: scroll; height: 480px;">
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/quick_links_files/IPR_Policy_2021.pdf">
+																			IPR Policy of Tezpur University
+																		</a>
+																	</h3>
+																	<div><span class="date">September 21, 2023</span>
+																	</div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/quick_links_files/Invention_Disclosure_Form.pdf">
+																			Invention Disclosure Form
+																		</a>
+																	</h3>
+																	<div><span class="date">September 22, 2023</span>
+																	</div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/pdf/MOA-NRDC.pdf">
+																			MoU/MoA
+																		</a>
+																	</h3>
+																	<div><span class="date">September 21, 2023</span>
+																	</div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="hhttps://www.tezu.ernet.in/tuipr_cell/newsletter.php">
+																			Newsletters
+																		</a>
+																	</h3>
+																	<div><span class="date">2023</span></div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/annual-report.php">
+																			Annual Report
+																		</a>
+																	</h3>
+																	<div><span class="date">June 10, 2023</span></div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/quick_links_files/Celebrating_10_years_IPRCell_TU.pdf">
+																			10 years of IPR Cell in Tezpur University
+																		</a>
+																	</h3>
+																	<div><span class="date">2023</span></div>
+																</li>
+																<li class="lst_news_item">
+																	<h3 class="title mg_0">
+																		<a target="_blank"
+																			href="https://www.tezu.ernet.in/tuipr_cell/booklates.php">
+																			WIPO booklets on IPR
+																		</a>
+																	</h3>
+																	<div><span class="date">March 4, 2023</span></div>
+																</li>
 
+
+															</ul>
+
+															<!-- <a href="" title="" target="_blank" class="btn btn-unsolemn btn-action read-more">View all</a> -->
+														</article>
 													</div>
 												</div>
 
 												<div class="kc-elm kc-css-244987 kc_col-sm-4 kc_column kc_col-sm-4">
 													<div class="kc-col-container">
 														<article
-															class="sabbi-thumlinepost-card card-video solitude-bg__x kc-elm kc-css-733921">
+															class="sabbi-thumlinepost-card card-video solitude-bg__x kc-elm kc-css-733921"
+															>
 															<!-- <figure class="sabbi-thumlinepost-card-figure">
 																<a class="video-play"
 																	href="https://youtu.be/C3PAGkEW-8I"
@@ -1474,15 +1533,34 @@
 																<figcaption>Dr. Soumik Roy's Research Lab</figcaption>
 															</figure> -->
 															<h3 class="entry-title">
-																<a href="#" target="_self">Vision</a>
+																<a href="#" target="_self">About</a>
 															</h3>
-															<p style="margin-right: 10px;">
-																To become a world class centre for the creation of human
-																resources in
-																the field of Intellectual Property Rights (IPR) and to
-																establish systems
-																for seamless integration of IPR in the Knowledge Value
-																Chain in an evolving university framework.
+															<p style="margin-right: 10px; overflow-y: scroll; height: 480px; -ms-overflow-style: none;">
+																Tezpur University Intellectual Property Rights Cell
+																(TUIPR Cell) was established in 2009 with a vision to
+																develop human resource in the management of Intellectual
+																Property Rights as an integral part of the innovation
+																process and the innovation value chain in the
+																University. Several patent, copyright and industrial
+																design applications have been filed based on the
+																innovations done in Tezpur University. The Cell has been
+																involved in several IPR awareness and implementation
+																programmes in the University Campus and also across the
+																North East region. The Cell is gradually building IPR
+																consciousness in the Region, not only within the
+																institutions but also among different strata in the
+																society. In 2020, the Department of Promotion of
+																Industry and Internal Trade (DPIIT) under the Ministry
+																of Commerce and Industries, Govt. of India has awarded
+																the prestigious IPR Chair to Tezpur University under the
+																Scheme of Pedagogy & Research in IPRs for holistic
+																Education & Academia (SPRIHA). The IPR Chair Professor
+																and various staff recruited under the scheme operate
+																from the IPR Cell. It is noteworthy to mention that a
+																IPR Chair funded by MHRD was awarded to Tezpur
+																University way back in 2010 which worked with an aim to
+																initiate and execute IPR capability development
+																programmes in the North-East Region.
 															</p>
 															<p>
 
@@ -1496,7 +1574,7 @@
 															class="news-card sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-674136">
 															<h2 class="stage-title">Recent Works & Achievement</h2>
 															<ul class="list-unstyled lst_news_list" tabindex="0"
-																style="overflow-y: scroll; height: 280px;">
+																style="overflow-y: scroll; height: 480px;">
 																<li class="lst_news_item">
 																	<h3 class="title mg_0">
 																		<a target="_blank"
@@ -1987,7 +2065,25 @@
 														</div>
 													</div>
 												</section>
-
+												<section class="kc-elm kc-css-284016 kc_row">
+													<div class="kc-row-container  kc-container">
+														<div id="slideshow">
+															<div id="slides">
+																<img id="left-img" src="./assets/img/ipr/agri4.jpg"
+																	class="slide active" style="display: block;">
+																<img id="main-img" src="./assets/img/ipr/ipday224.jpg"
+																	class="slide">
+																<img id="right-img" src="./assets/img/ipr/ipr21.jpg"
+																	class="slide">
+																<!-- Add more images as needed -->
+															</div>
+															<div>
+																<button id="left" onclick="moveSlide(-1)">❮</button>
+																<button id="right" onclick="moveSlide(1)">❯</button>
+															</div>
+														</div>
+													</div>
+												</section>
 
 												<section class="kc-elm kc-css-284016 kc_row">
 													<div class="kc-row-container  kc-container">
@@ -2013,37 +2109,49 @@
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2021-22
+																				<a href="activities.html#2021-2022">
+																					2021-22
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">12</span>
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2020-21
+																				<a href="activities.html#2020-2021">
+																					2020-21
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">1</span>
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2019-20
+																				<a href="activities.html#2019-2020">
+																					2019-20
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">2</span>
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2018-19
+																				<a href="activities.html#2018-2019">
+																					2018-19
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">6</span>
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2017-18
+																				<a href="activities.html#2017-2018">
+																					2017-18
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">2</span>
 																			</li>
 																			<li
 																				class="list-group-item d-flex justify-content-between align-items-center">
-																				2016-17
+																				<a href="activities.html#2016-2017">
+																					2016-17
+																				</a>
 																				<span
 																					class="badge badge-primary badge-pill">3</span>
 																			</li>
@@ -2298,113 +2406,6 @@
 														</div>
 													</div>
 												</section>
-
-
-												<!-- <section class="kc-elm kc-css-505840 kc_row">
-													<div class="kc-row-container  kc-container">
-														<div class="kc-wrap-columns">
-															<div
-																class="kc-elm kc-css-646282 kc_col-sm-4 kc_column kc_col-sm-4">
-																<div class="kc-col-container">
-																	<article
-																		class="sabbi-thumlinepost-card solitude-bg__x profile-card kc-elm kc-css-614769 researcher-profile">
-																		<figure class="sabbi-thumlinepost-card-figure">
-																			<img width="270" height="222"
-																				src="assets/img/prof.jpg"
-																				class="img-thumpost img-responsive"
-																				alt="Shibayan Roy"
-																				srcset="assets/img/prof.jpg 270w, assets/img/prof_263x216.jpg 263w"
-																				sizes="(max-width: 270px) 100vw, 270px" />
-
-																			<figcaption>
-																				<div class="fig-meta"></div>
-																			</figcaption>
-																		</figure>
-
-																		<h2 class="entry-title"><a href="Roy.html">Prof.
-																				Soumik Roy</a></h2>
-
-																		<div class="card_st_fix">
-																			<h3 class="stage-title">Biography</h3>
-
-																			<p>
-																				Prof. Soumik Roy is currently a
-																				Professor at the Department of
-																				Electronics & Communication, Tezpur
-																				University in India.
-																			</p>
-
-																		</div>
-																	</article>
-																</div>
-															</div>
-
-															<div
-																class="kc-elm kc-css-1614 kc_col-sm-8 kc_column kc_col-sm-8">
-																<div class="kc-col-container">
-																	<div class="education_timeline_wrap">
-																		<ol class="ol-timeline">
-
-
-
-																			<li class="tl-item with-icon">
-																				<p><span class="item-section">November
-																						2020</span></p>
-																				<div class="content-wrapper">
-																					<h3 class="title">Professor in
-																						Electronics & Communication
-																						Department</h3>
-																					<div class="description">Tezpur
-																						University</div>
-																				</div>
-																			</li>
-
-																			<li class="tl-item with-icon">
-																				<p><span class="item-section">November
-																						2011</span></p>
-																				<div class="content-wrapper">
-																					<h3 class="title">PhD in
-																						NeuroEngineering</h3>
-																					<div class="description">Department
-																						of Electronics & Communication,
-																						TU</div>
-																				</div>
-																			</li>
-
-																			<li class="tl-item with-icon">
-																				<p><span class="item-section">May
-																						1999</span></p>
-																				<div class="content-wrapper">
-																					<h3 class="title">M. Tech in
-																						Electronics Design & Technology
-																					</h3>
-																					<div class="description">Department
-																						of Electronics & Communication,
-																						TU</div>
-																				</div>
-																			</li>
-
-																			<li class="tl-item with-icon">
-																				<p><span class="item-section">July
-																						2003</span></p>
-																				<div class="content-wrapper">
-																					<h3 class="title">Bachelor of
-																						Engineering (B.E.) in Electrical
-																						Engineering</h3>
-																					<div class="description">Dibrugarh
-																						University/ Jorhat Engineering
-																						College, Assam</div>
-																				</div>
-																			</li>
-																		</ol>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section> -->
-
-
 												<section class="kc-elm kc-css-519846 kc_row team-row">
 													<div class="kc-row-container  kc-container">
 														<div class="kc-wrap-columns">
@@ -2425,7 +2426,7 @@
 																					srcset="assets/img/ipr/worldipday232.jpg 263w, assets/img/ipr/worldipday232.jpg 270w"
 																					sizes="(max-width: 263px) 100vw, 263px" />
 																				<figcaption>
-																					<a href="Biswa.html">
+																					<a href="gallery.html">
 																						<h3 class="fig-title">
 																							World IP Day 2023
 																						</h3>
@@ -2450,7 +2451,7 @@
 																					srcset="assets/img/ipr/ipr21.jpg 263w, assets/img/ipr/ipr21.jpg 270w"
 																					sizes="(max-width: 263px) 100vw, 263px" />
 																				<figcaption>
-																					<a href="uddipan.html">
+																					<a href="gallery.html">
 																						<h3 class="fig-title">
 																							Workshop on Importance of
 																							IPR
@@ -2473,7 +2474,7 @@
 																					srcset="assets/img/ipr/ipr304.jpg 263w, assets/img/ipr/ipr304.jpg 270w"
 																					sizes="(max-width: 263px) 100vw, 263px" />
 																				<figcaption>
-																					<a href="BBB.html">
+																					<a href="gallery.html">
 																						<h3 class="fig-title">
 																							Certificate Programme on
 																							Intellectual Property Rights
@@ -2487,7 +2488,7 @@
 
 																	<div
 																		class="action-wrap text-right-sm kc-elm kc-css-50548">
-																		<a href="our-team.html" title="" target="_blank"
+																		<a href="galley.html" title="" target="_blank"
 																			class="btn btn-unsolemn btn-action">
 																			View all
 																		</a>
@@ -2603,6 +2604,32 @@
 		</div><!-- #page -->
 
 	</div> <!-- end site main -->
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function moveSlide(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("slide");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			// slides[slideIndex - 1].style.display = "block";
+			slides[slideIndex - 1].style.display = "block";
+			// slides[slideIndex + 1].style.display = "block";
+		}
+	</script>
 
 	<script type='text/javascript' src='wp-content/plugins/academix-core/assets/js/hammer.min.js'></script>
 	<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js'></script>

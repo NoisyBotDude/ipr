@@ -349,9 +349,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #D30015;
+  border-color: #054d84;
   border-radius: 3px;
-  background: #D30015;
+  background: #054d84;
   color: rgba(0, 0, 0, .8);
   font-size: 14px;
   line-height: 1;
@@ -438,7 +438,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #D30015;
+  color: #054d84;
   text-decoration: none; }
 
 a:hover,
