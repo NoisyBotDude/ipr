@@ -175,6 +175,28 @@
 			animation: fade 0.5s;
 		}
 
+		.message-chairman {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.message-chairman-image {
+			width: 200px; 
+			border-radius: 20px;
+		}
+
+		.message-chairman-message {
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.message-chairman-message-title {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0;
+		}
+
 		.academix-content-area {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -2016,7 +2038,23 @@
 												</div>
 
 
-
+												<section class="kc-elm kc-css-427948 kc_row">
+													<div class="kc-row-container  kc-container">
+														<div class="kc-wrap-columns">
+															<div class="kc-elm kc-css-166907 kc_col-sm-12 kc_column kc_col-sm-12 " style="background-color: #edf2f6;width: 100%; padding: 30px;">
+																<div class="message-chairman">
+																	<div>
+																		<img src="./assets/img/pritam.jpg" alt="" class="message-chairman-image">
+																	</div>
+																	<div class="message-chairman-message">
+																		<h3 class="message-chairman-message-title">Message From the Chairman</h3>
+																		<p>This is a very long message from the chairman</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
 												<section class="kc-elm kc-css-346302 kc_row">
 													<div class="kc-row-container  kc-container">
 														<div class="kc-wrap-columns">
@@ -2071,15 +2109,29 @@
 													<div class="kc-row-container  kc-container">
 														<div id="slideshow">
 															<div id="slides">
-																<img src="./assets/img/ipr/ipday224.jpg"
+																<img src="./assets/img/ipr/12 IP Day 2022 at Tezpur University.jpg"
 																	class="slide non-active">
-																<img src="./assets/img/ipr/agri4.jpg"
+																<img src="./assets/img/ipr/11 IP Day 2023 at Tezpur University.jpg"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/8 Entrepreneurs’ Meet on GIs of Assam for better Agri-Business Opportunities on March 2023.JPG"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/6 Falicitating Dr. Amogh Dev Rai in the Entrepreneurs programme on January 2023.JPG"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/1 Workshop on Folk Medicine, Traditional Knowledge and IPR at Majuli on September 2023.jpeg"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/2 National workshop on Capacity building for Enforcement and Adjudication of IPR at Police Training College, Assam on March 2022.JPG"
 																	class="slide active-non-main">
-																<img src="./assets/img/ipr/ipday224.jpg"
+																<img src="./assets/img/ipr/3 Brain Storming on prospects of protecting indigenous Ginger varieties of Assam using tools of IPR on March 2022.JPG"
 																	class="slide active">
-																<img src="./assets/img/ipr/ipr21.jpg"
+																<img src="./assets/img/ipr/4 Certificate Programme on Intellectual Property Rights for Enterprise Development on January 2023.JPG"
 																	class="slide active-non-main">
-																<img src="./assets/img/ipr/ipday224.jpg"
+																<img src="./assets/img/ipr/5 Innovation Exhibition on January 2023.JPG"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/7 Anjali Aeri, World Intellectual Property Organization (WIPO) delivering the IP Day lecture 2022.JPG"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/9 Workshop on Importance of IPR for Startups, Research and Academia at NEHU, Shillong on March 2023.JPG"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/10 Workshop on Intellectual Property Rights for Safeguarding Cultural Heritage and Related Innovations at Majuli on September 2023.jpg"
 																	class="slide non-active">
 															</div>
 															<div>
@@ -2635,20 +2687,6 @@
 			slides[slideIndex].classList.remove("non-active");
 			slides[slideIndex + 1].classList.add("active", "active-non-main");
 			slides[slideIndex + 1].classList.remove("non-active");
-
-
-			// if (n > slides.length) {
-			// 	slideIndex = 1
-			// }
-			// if (n < 1) {
-			// 	slideIndex = slides.length
-			// }
-			// for (i = 0; i < slides.length; i++) {
-			// 	slides[i].style.display = "none";
-			// }
-			// // slides[slideIndex - 1].style.display = "block";
-			// slides[slideIndex - 1].style.display = "block";
-			// slides[slideIndex + 1].style.display = "block";
 		}
 	</script>
 
