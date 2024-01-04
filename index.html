@@ -139,12 +139,8 @@
 		}
 
 		#slides img {
-			width: 800px;
-			height: 500px;
-		}
-
-		#slides .slide {
-			display: none;
+			width: 700px;
+			height: 400px;
 		}
 
 		#slides .slide.active {
@@ -153,10 +149,16 @@
 
 		#slides .slide.active-non-main {
 			display: block;
+			width: 500px;
+			height: 200px;
 		}
 
 		#slides .slide.active img {
 			animation: fade 0.5s;
+		}
+
+		#slides .non-active {
+			display: none;
 		}
 
 		@keyframes fade {
@@ -2069,13 +2071,16 @@
 													<div class="kc-row-container  kc-container">
 														<div id="slideshow">
 															<div id="slides">
-																<img id="left-img" src="./assets/img/ipr/agri4.jpg"
-																	class="slide active" style="display: block;">
-																<img id="main-img" src="./assets/img/ipr/ipday224.jpg"
-																	class="slide">
-																<img id="right-img" src="./assets/img/ipr/ipr21.jpg"
-																	class="slide">
-																<!-- Add more images as needed -->
+																<img src="./assets/img/ipr/ipday224.jpg"
+																	class="slide non-active">
+																<img src="./assets/img/ipr/agri4.jpg"
+																	class="slide active-non-main">
+																<img src="./assets/img/ipr/ipday224.jpg"
+																	class="slide active">
+																<img src="./assets/img/ipr/ipr21.jpg"
+																	class="slide active-non-main">
+																<img src="./assets/img/ipr/ipday224.jpg"
+																	class="slide non-active">
 															</div>
 															<div>
 																<button id="left" onclick="moveSlide(-1)">❮</button>
@@ -2616,17 +2621,33 @@
 		function showSlides(n) {
 			var i;
 			var slides = document.getElementsByClassName("slide");
-			if (n > slides.length) {
-				slideIndex = 1
-			}
-			if (n < 1) {
-				slideIndex = slides.length
-			}
+			console.log(slides);
+			
 			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
+				slides[i].classList.add("non-active");
+				slides[i].classList.remove("active", "active-non-main");
 			}
+
+			// remove all classes from slides[slideIndex -1]
+			slides[slideIndex - 1].classList.add("active", "active-non-main");
+			slides[slideIndex - 1].classList.remove("non-active");
+			slides[slideIndex].classList.add("active");
+			slides[slideIndex].classList.remove("non-active");
+			slides[slideIndex + 1].classList.add("active", "active-non-main");
+			slides[slideIndex + 1].classList.remove("non-active");
+
+
+			// if (n > slides.length) {
+			// 	slideIndex = 1
+			// }
+			// if (n < 1) {
+			// 	slideIndex = slides.length
+			// }
+			// for (i = 0; i < slides.length; i++) {
+			// 	slides[i].style.display = "none";
+			// }
+			// // slides[slideIndex - 1].style.display = "block";
 			// slides[slideIndex - 1].style.display = "block";
-			slides[slideIndex - 1].style.display = "block";
 			// slides[slideIndex + 1].style.display = "block";
 		}
 	</script>
