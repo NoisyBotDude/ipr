@@ -1675,7 +1675,7 @@
 														<article
 															class="news-card sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-674136">
 															<h2 class="stage-title" style="font-size: 2em; color: #173c8a;">Recent Works & Achievement</h2>
-															<ul class="list-unstyled lst_news_list" tabindex="0"
+															<ul class="list-unstyled lst_news_list" id="recent-works-achievement-list" tabindex="0"
 																style="overflow-y: scroll; height: 455px;">
 																<li class="lst_news_item">
 																	<h3 class="title mg_0">
@@ -2133,7 +2133,7 @@
 															<h3 class="entry-title">
 																<a href="#" target="_self" style="font-size: 2em; color: #173c8a;">About</a>
 															</h3>
-															<p
+															<p id="about-list"
 																style="margin-right: 10px; overflow-y: scroll; height: 503px; -ms-overflow-style: none;">
 																Tezpur University Intellectual Property Rights Cell
 																(TUIPR Cell) was established in 2009 with a vision to
@@ -2172,7 +2172,7 @@
 														<article
 															class="news-card sabbi-thumlinepost-card solitude-bg__x kc-elm kc-css-674136">
 															<h2 class="stage-title" style="font-size: 2em; color: #173c8a;">Quick Links</h2>
-															<ul class="list-unstyled lst_news_list" tabindex="0"
+															<ul class="list-unstyled lst_news_list" tabindex="0" id="quick-links-list"
 																style="height: 230px; overflow-y: scroll;">
 																<li class="lst_news_item">
 																	<h3 class="title mg_0">
@@ -2927,6 +2927,65 @@
 			slides[slideIndex + 1].classList.add("active", "active-non-main");
 			slides[slideIndex + 1].classList.remove("non-active");
 		}
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    var scrollContainer = document.getElementById('recent-works-achievement-list');
+    var scrollStep = 1; // Number of pixels to scroll each step
+    var scrollInterval = 50; // Milliseconds between each scroll step
+    
+    var scrollFunction = function() {
+        // Check if the bottom is reached
+        if (scrollContainer.scrollTop < scrollContainer.scrollHeight - scrollContainer.clientHeight) {
+            scrollContainer.scrollTop += scrollStep;
+        } else {
+            // Reset to the top if the bottom is reached
+            scrollContainer.scrollTop = 0;
+        }
+    };
+    
+    setInterval(scrollFunction, scrollInterval);
+});
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    var scrollContainer = document.getElementById('about-list');
+    var scrollStep = 1; // Number of pixels to scroll each step
+    var scrollInterval = 50; // Milliseconds between each scroll step
+    
+    var scrollFunction = function() {
+        // Check if the bottom is reached
+        if (scrollContainer.scrollTop < scrollContainer.scrollHeight - scrollContainer.clientHeight) {
+            scrollContainer.scrollTop += scrollStep;
+        } else {
+            // Reset to the top if the bottom is reached
+            scrollContainer.scrollTop = 0;
+        }
+    };
+    
+    setInterval(scrollFunction, scrollInterval);
+});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    var scrollContainer = document.getElementById('quick-links-list');
+    var scrollStep = 1; // Number of pixels to scroll each step
+    var scrollInterval = 50; // Milliseconds between each scroll step
+    
+    var scrollFunction = function() {
+        // Check if the bottom is reached
+        if (scrollContainer.scrollTop < scrollContainer.scrollHeight - scrollContainer.clientHeight) {
+            scrollContainer.scrollTop += scrollStep;
+        } else {
+            // Reset to the top if the bottom is reached
+            scrollContainer.scrollTop = 0;
+        }
+    };
+    
+    setInterval(scrollFunction, scrollInterval);
+});
 	</script>
 
 	<script type='text/javascript' src='wp-content/plugins/academix-core/assets/js/hammer.min.js'></script>
